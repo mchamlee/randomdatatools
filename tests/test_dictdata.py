@@ -24,6 +24,23 @@ class TestDictReplace(unittest.TestCase):
             }
         }}
 
+    test_dict_list = {
+        'numeric-element1': 1,
+        'numeric-element2': 2,
+        'alpha-element1': {
+            'alpha-sub-element1': ['ab-cd', 'qr-st-uv', 'wxy-z'],
+            'numeric-sub-element1': 3
+        },
+        'alpha-element2': 'ef-gh',
+        'alpha-element3': {
+            'numeric-sub-element2': 4,
+            'alpha-sub-element2': {
+                'numeric-sub-sub-element1': 5,
+                'alpha-sub-sub-element1': 'ij-kl',
+                'alpha-sub-sub-element2': 'mn-op'
+            }
+        }}
+
     result_dict_replace_with_underscores_all = {
         'numeric_element1': 1,
         'numeric_element2': 2,
@@ -104,4 +121,6 @@ class TestDictReplace(unittest.TestCase):
     def test_replace_all_numeric_number_positive(self):
         self.assertEqual(dict_replace(self.test_dict, 'numeric', 'number'), self.result_dict_replace_numeric_with_number_all)
 
-
+    def test_replace_all_with_list_raise_value_error(self):
+        with self.assertRaises(ValueError):
+            dict_replace(self.test_dict_list, '-', '_')

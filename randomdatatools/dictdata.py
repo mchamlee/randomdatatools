@@ -36,6 +36,8 @@ def dict_replace(the_dict, replace_what, replace_with, where_to_replace='a'):
     for key in the_dict:
         if isinstance(the_dict[key], dict):
             new_dict[handle_replace(key, 'k', **replace_args)] = dict_replace(the_dict[key], replace_what, replace_with, where_to_replace)
+        elif isinstance(the_dict[key], (list, set, tuple)):
+            raise ValueError("Does not handle list, set, or tuple.")
         else:
             new_dict[handle_replace(key, 'k', **replace_args)] = \
                 handle_replace(the_dict[key], 'v', **replace_args)
