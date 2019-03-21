@@ -109,18 +109,60 @@ class TestDictReplace(unittest.TestCase):
             }
         }}
 
+    result_dict_list_replace_hyphen_with_underscore_values = {
+        'numeric-element1': 1,
+        'numeric-element2': 2,
+        'alpha-element1': {
+            'alpha-sub-element1': ['ab_cd', 'qr_st_uv', 'wxy_z'],
+            'numeric-sub-element1': 3
+        },
+        'alpha-element2': 'ef_gh',
+        'alpha-element3': {
+            'numeric-sub-element2': 4,
+            'alpha-sub-element2': {
+                'numeric-sub-sub-element1': 5,
+                'alpha-sub-sub-element1': 'ij_kl',
+                'alpha-sub-sub-element2': 'mn_op'
+            }
+        }}
+
+    result_dict_list_replace_hyphen_with_underscore_all = {
+        'numeric_element1': 1,
+        'numeric_element2': 2,
+        'alpha_element1': {
+            'alpha_sub_element1': ['ab_cd', 'qr_st_uv', 'wxy_z'],
+            'numeric_sub_element1': 3
+        },
+        'alpha_element2': 'ef_gh',
+        'alpha_element3': {
+            'numeric_sub_element2': 4,
+            'alpha_sub_element2': {
+                'numeric_sub_sub_element1': 5,
+                'alpha_sub_sub_element1': 'ij_kl',
+                'alpha_sub_sub_element2': 'mn_op'
+            }
+        }}
+
     def test_replace_all_dash_underscore_positive(self):
-        self.assertEqual(dict_replace(self.test_dict, '-', '_'), self.result_dict_replace_with_underscores_all)
+        self.assertEqual(dict_replace(self.test_dict, '-', '_'),
+                         self.result_dict_replace_with_underscores_all)
 
     def test_replace_keys_dash_underscore_positive(self):
-        self.assertEqual(dict_replace(self.test_dict, '-', '_', 'k'), self.result_dict_replace_with_underscores_keys)
+        self.assertEqual(dict_replace(self.test_dict, '-', '_', 'k'),
+                         self.result_dict_replace_with_underscores_keys)
 
     def test_replace_values_dash_underscore_positive(self):
-        self.assertEqual(dict_replace(self.test_dict, '-', '_', 'v'), self.result_dict_replace_with_underscores_values)
+        self.assertEqual(dict_replace(self.test_dict, '-', '_', 'v'),
+                         self.result_dict_replace_with_underscores_values)
 
     def test_replace_all_numeric_number_positive(self):
-        self.assertEqual(dict_replace(self.test_dict, 'numeric', 'number'), self.result_dict_replace_numeric_with_number_all)
+        self.assertEqual(dict_replace(self.test_dict, 'numeric', 'number'),
+                         self.result_dict_replace_numeric_with_number_all)
 
-    def test_replace_all_with_list_raise_value_error(self):
-        with self.assertRaises(ValueError):
-            dict_replace(self.test_dict_list, '-', '_')
+    def test_replace_values_hyphen_underscore_with_list_positive(self):
+        self.assertEqual(dict_replace(self.test_dict_list, '-', '_', 'v'),
+                         self.result_dict_list_replace_hyphen_with_underscore_values)
+
+    def test_replace_all_hyphen_underscore_with_list_positive(self):
+        self.assertEqual(dict_replace(self.test_dict_list, '-', '_'),
+                         self.result_dict_list_replace_hyphen_with_underscore_all)
