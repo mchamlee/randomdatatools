@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OrderAuditList LastOrderAuditKey="201809301956101768959254"
+    LastRecordSet="Y" ReadFromHistory="N" TotalOrderAuditList="3513">
+    <OrderAudit AuditTransactionId="" ModifyUserName=""
+        Modifyts="2018-09-03T10:45:37+00:00"
+        Modifyuserid="RDSHoldResolveAgent"
+        OrderAuditKey="201809031045371767908445"
+        OrderHeaderKey="201809031015171767907659" ReasonCode=""
+        ReasonText="" Reference1="" Reference2="" Reference3=""
+        Reference4="" XMLFlag="Y" isHistory="N">
+        <Order DocumentType="0001" EnterpriseCode="CHIC" OrderNo="CRSTG00054426"/>
+        <OrderAuditLevels>
+            <OrderAuditLevel ModificationLevel="ORDER"
+                ModificationLevelScreenName="Order" OrderLineKey="" OrderReleaseKey="">
+                <ModificationTypes>
+                    <ModificationType Name="OTHERS" ScreenName="Change Other Attributes"/>
+                    <ModificationType Name="HOLD_TYPE" ScreenName="Hold Type Modifications"/>
+                </ModificationTypes>
+            </OrderAuditLevel>
+        </OrderAuditLevels>
+    </OrderAudit>
+    <OrderAudit AuditTransactionId="" ModifyUserName=""
+        Modifyts="2018-09-03T10:46:10+00:00"
+        Modifyuserid="RDSScheduleOrderAgentServer"
+        OrderAuditKey="201809031046101767908452"
+        OrderHeaderKey="201809031015171767907659" ReasonCode=""
+        ReasonText="" Reference1="" Reference2="" Reference3=""
+        Reference4="" XMLFlag="Y" isHistory="N">
+        <Order DocumentType="0001" EnterpriseCode="CHIC" OrderNo="CRSTG00054426"/>
+        <OrderAuditLevels>
+            <OrderAuditLevel ModificationLevel="ORDER"
+                ModificationLevelScreenName="Order" OrderLineKey="" OrderReleaseKey="">
+                <ModificationTypes>
+                    <ModificationType Name="OTHERS" ScreenName="Change Other Attributes"/>
+                    <ModificationType Name="PRICE" ScreenName="Change Price"/>
+                </ModificationTypes>
+            </OrderAuditLevel>
+            <OrderAuditLevel ModificationLevel="ORDER_LINE"
+                ModificationLevelScreenName="Line"
+                OrderLineKey="201809031015171767907660" OrderReleaseKey="">
+                <OrderLine PrimeLineNo="1" SubLineNo="1">
+                    <Item CostCurrency="" CountryOfOrigin=""
+                        CustomerItem=""
+                        CustomerItemDesc="Refuge Destroyed Boyfriend Jeans(302563980)"
+                        ECCNNo="" HarmonizedCode="" ISBN=""
+                        ItemDesc="Refuge Destroyed Boyfriend Jeans"
+                        ItemID="302563980" ItemShortDesc=""
+                        ItemWeight="0.00" ItemWeightUOM="LBS"
+                        ManufacturerItem="" ManufacturerItemDesc=""
+                        ManufacturerName="" NMFCClass="" NMFCCode=""
+                        NMFCDescription="" ProductClass="GOOD"
+                        ProductLine="" ScheduleBCode="" SupplierItem=""
+                        SupplierItemDesc="" TaxProductCode="" UPCCode=""
+                        UnitCost="0.00" UnitOfMeasure="EACH">
+                        <LanguageDescriptionList/>
+                    </Item>
+                </OrderLine>
+                <ModificationTypes>
+                    <ModificationType Name="OTHERS" ScreenName="Change Other Attributes"/>
+                    <ModificationType Name="PRICE" ScreenName="Change Price"/>
+                    <ModificationType Name="CANCEL" ScreenName="Cancel"/>
+                </ModificationTypes>
+            </OrderAuditLevel>
+        </OrderAuditLevels>
+    </OrderAudit>
+    <OrderAudit AuditTransactionId="" ModifyUserName=""
+        Modifyts="2018-09-03T11:01:37+00:00"
+        Modifyuserid="RDSHoldResolveAgent"
+        OrderAuditKey="201809031101371767908957"
+        OrderHeaderKey="201809031031171767908113" ReasonCode=""
+        ReasonText="" Reference1="" Reference2="" Reference3=""
+        Reference4="" XMLFlag="Y" isHistory="N">
+        <Order DocumentType="0001" EnterpriseCode="CHIC" OrderNo="CRSTG00054427"/>
+        <OrderAuditLevels>
+            <OrderAuditLevel ModificationLevel="ORDER"
+                ModificationLevelScreenName="Order" OrderLineKey="" OrderReleaseKey="">
+                <ModificationTypes>
+                    <ModificationType Name="OTHERS" ScreenName="Change Other Attributes"/>
+                    <ModificationType Name="HOLD_TYPE" ScreenName="Hold Type Modifications"/>
+                </ModificationTypes>
+            </OrderAuditLevel>
+        </OrderAuditLevels>
+    </OrderAudit>
+</OrderAuditList>
